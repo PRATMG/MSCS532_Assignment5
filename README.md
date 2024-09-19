@@ -5,12 +5,16 @@
 This repository contains the implementation of both deterministic and randomized versions of the Quicksort algorithm. The algorithms are analyzed for their performance, both theoretically and empirically, across different input distributions (random, sorted, and reverse-sorted arrays). 
 
 ### Files Included:
-- `quicksort.py`: Contains the deterministic implementation of the Quicksort algorithm.
-- `randomized_quicksort.py`: Contains the randomized implementation of the Quicksort algorithm.
-- `report.md`: Detailed report on the design, implementation, and performance analysis of the Quicksort algorithms.
-- `README.md`: Instructions on running the code and a summary of the results.
 
----
+| Filename                          | Description                                                                 |
+|------------------------------------|-----------------------------------------------------------------------------|
+| [quicksort.py](./quicksort.py)     | Python script implementing the deterministic version of the Quicksort algorithm. |
+| [randomized_quicksort.py](./randomized_quicksort.py) | Python script implementing the randomized version of the Quicksort algorithm.  |
+| [compare_quicksort.py](./compare_quicksort.py) | Python script to compare the running time of the deterministic and randomized versions of Quicksort.  |
+| [analysis.md](./analysis.md)           | A detailed report covering design choices, performance analysis, and results. |
+| [README.md](./README.md)           | This file. Instructions on how to run the code and a summary of the findings. |
+
+
 
 ## How to Run the Code
 
