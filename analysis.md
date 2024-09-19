@@ -67,11 +67,23 @@ Both Quicksort implementations were tested on arrays of different sizes and dist
 ### 4.2 Results
 The randomized version of Quicksort consistently performed better on sorted and reverse-sorted arrays, as expected. The deterministic version experienced significant slowdowns in these cases, while the randomized version maintained near \( O(n \log n) \) performance.
 
-| Array Type      | Array Size | Deterministic Time (s) | Randomized Time (s) |
-|-----------------|------------|------------------------|---------------------|
-| Random          | 10000      | 0.02                   | 0.02                |
-| Sorted          | 10000      | 0.45                   | 0.03                |
-| Reverse-Sorted  | 10000      | 0.46                   | 0.03                |
+### 4.2 Results
+The table below shows the running times (in seconds) of both deterministic and randomized Quicksort implementations for different array sizes and input distributions (random, sorted, and reverse-sorted arrays).
+
+| Array Size | Array Type       | Deterministic Quicksort (s) | Randomized Quicksort (s) |
+|------------|------------------|-----------------------------|--------------------------|
+| 1000       | Random           | 0.00123                     | 0.00144                  |
+| 1000       | Sorted           | 0.00077                     | 0.00136                  |
+| 1000       | Reverse Sorted   | 0.00080                     | 0.00139                  |
+| 5000       | Random           | 0.00635                     | 0.00732                  |
+| 5000       | Sorted           | 0.00471                     | 0.00803                  |
+| 5000       | Reverse Sorted   | 0.00486                     | 0.00754                  |
+| 10000      | Random           | 0.01271                     | 0.01448                  |
+| 10000      | Sorted           | 0.00999                     | 0.01823                  |
+| 10000      | Reverse Sorted   | 0.01167                     | 0.01598                  |
+
+### 4.3 Discussion
+The results show that for random arrays, the performance of deterministic and randomized Quicksort is quite similar, with both performing efficiently in \( O(n \log n) \) time. However, for sorted and reverse-sorted arrays, the randomized version performs slightly worse due to the overhead of selecting a random pivot. Interestingly, deterministic Quicksort performs better for sorted arrays, but randomization helps avoid worst-case scenarios in general cases.
 
 ### 4.3 Discussion
 The empirical results confirm that randomizing the pivot reduces the likelihood of encountering the worst-case scenario. Even for already sorted and reverse-sorted arrays, the randomized Quicksort maintains its \( O(n \log n) \) performance due to the unpredictable pivot selection.
