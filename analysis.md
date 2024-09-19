@@ -41,7 +41,7 @@ In the randomized version of Quicksort, the pivot is chosen randomly at each rec
   In the best case, the pivot splits the array into two equal parts at every step, leading to the recurrence:
   T(n) = 2T(n/2) + O(n)
 
-This solves to \( O(n \log n) \). The best-case scenario occurs when the pivot consistently divides the array evenly (Cormen et al., 2022, p. 188).
+This solves to \( O(n log n) \). The best-case scenario occurs when the pivot consistently divides the array evenly (Cormen et al., 2022, p. 188).
 
 - **Average-case Time Complexity:**  
 On average, the pivot will divide the array into two roughly equal parts, resulting in a time complexity of \( O(n \log n) \). This is because the recurrence relation for the average case remains similar to the best-case recurrence (Cormen et al., 2022, p. 189).
@@ -52,7 +52,7 @@ The worst-case time complexity is \( O(n^2) \), which occurs when the pivot cons
 which solves to \( O(n^2) \) (Cormen et al., 2022, p. 188).
 
 ### 3.2 Space Complexity
-Quicksort has a space complexity of \( O(\log n) \) due to the recursion stack depth in the average and best cases. However, in the worst case, the recursion depth can reach \( O(n) \) if the array is consistently unbalanced. In both deterministic and randomized versions, no additional memory is required for the array, except for the space used by the recursion stack (Cormen et al., 2022, p. 188).
+Quicksort has a space complexity of \( O(log n) \) due to the recursion stack depth in the average and best cases. However, in the worst case, the recursion depth can reach \( O(n) \) if the array is consistently unbalanced. In both deterministic and randomized versions, no additional memory is required for the array, except for the space used by the recursion stack (Cormen et al., 2022, p. 188).
 
 ---
 
@@ -65,7 +65,7 @@ Both Quicksort implementations were tested on arrays of different sizes and dist
 3. **Reverse-sorted arrays:** Another worst-case scenario for deterministic Quicksort.
 
 ### 4.2 Results
-The randomized version of Quicksort consistently performed better on sorted and reverse-sorted arrays, as expected. The deterministic version experienced significant slowdowns in these cases, while the randomized version maintained near \( O(n \log n) \) performance.
+The randomized version of Quicksort consistently performed better on sorted and reverse-sorted arrays, as expected. The deterministic version experienced significant slowdowns in these cases, while the randomized version maintained near \( O(n log n) \) performance.
 
 ### 4.2 Results
 The table below shows the running times (in seconds) of both deterministic and randomized Quicksort implementations for different array sizes and input distributions (random, sorted, and reverse-sorted arrays).
@@ -83,16 +83,16 @@ The table below shows the running times (in seconds) of both deterministic and r
 | 10000      | Reverse Sorted   | 0.01167                     | 0.01598                  |
 
 ### 4.3 Discussion
-The results show that for random arrays, the performance of deterministic and randomized Quicksort is quite similar, with both performing efficiently in \( O(n \log n) \) time. However, for sorted and reverse-sorted arrays, the randomized version performs slightly worse due to the overhead of selecting a random pivot. Interestingly, deterministic Quicksort performs better for sorted arrays, but randomization helps avoid worst-case scenarios in general cases.
+The results show that for random arrays, the performance of deterministic and randomized Quicksort is quite similar, with both performing efficiently in \( O(n log n) \) time. However, for sorted and reverse-sorted arrays, the randomized version performs slightly worse due to the overhead of selecting a random pivot. Interestingly, deterministic Quicksort performs better for sorted arrays, but randomization helps avoid worst-case scenarios in general cases.
 
 ### 4.3 Discussion
-The empirical results confirm that randomizing the pivot reduces the likelihood of encountering the worst-case scenario. Even for already sorted and reverse-sorted arrays, the randomized Quicksort maintains its \( O(n \log n) \) performance due to the unpredictable pivot selection.
+The empirical results confirm that randomizing the pivot reduces the likelihood of encountering the worst-case scenario. Even for already sorted and reverse-sorted arrays, the randomized Quicksort maintains its \( O(n log n) \) performance due to the unpredictable pivot selection.
 
 ---
 
 ## 5. Conclusion
 
-Both deterministic and randomized Quicksort algorithms are highly efficient under normal conditions, with an average-case time complexity of \( O(n \log n) \). However, the deterministic version suffers in the worst-case scenario when the input is already sorted or reverse-sorted. The randomized version mitigates this issue by randomly selecting the pivot, ensuring that the probability of encountering the worst-case scenario is significantly reduced. This makes the randomized Quicksort more robust across a wider range of input distributions.
+Both deterministic and randomized Quicksort algorithms are highly efficient under normal conditions, with an average-case time complexity of \( O(n log n) \). However, the deterministic version suffers in the worst-case scenario when the input is already sorted or reverse-sorted. The randomized version mitigates this issue by randomly selecting the pivot, ensuring that the probability of encountering the worst-case scenario is significantly reduced. This makes the randomized Quicksort more robust across a wider range of input distributions.
 
 ---
 
