@@ -44,7 +44,7 @@ In the randomized version of Quicksort, the pivot is chosen randomly at each rec
 This solves to \( O(n log n) \). The best-case scenario occurs when the pivot consistently divides the array evenly (Cormen et al., 2022, p. 188).
 
 - **Average-case Time Complexity:**  
-On average, the pivot will divide the array into two roughly equal parts, resulting in a time complexity of \( O(n \log n) \). This is because the recurrence relation for the average case remains similar to the best-case recurrence (Cormen et al., 2022, p. 189).
+On average, the pivot will divide the array into two roughly equal parts, resulting in a time complexity of \( O(n log n) \). This is because the recurrence relation for the average case remains similar to the best-case recurrence (Cormen et al., 2022, p. 189).
 
 - **Worst-case Time Complexity:**  
 The worst-case time complexity is \( O(n^2) \), which occurs when the pivot consistently divides the array into highly unbalanced partitions (e.g., when the input is already sorted or reverse-sorted). The recurrence for this case is: T(n) = T(n-1) + O(n)
@@ -63,6 +63,10 @@ Both Quicksort implementations were tested on arrays of different sizes and dist
 1. **Random arrays:** The most general case.
 2. **Sorted arrays:** Represents the worst-case scenario for deterministic Quicksort.
 3. **Reverse-sorted arrays:** Another worst-case scenario for deterministic Quicksort.
+
+[Link to run time analysis implementation](./compare_quicksort.py)
+
+---
 
 ### 4.2 Results
 The randomized version of Quicksort consistently performed better on sorted and reverse-sorted arrays, as expected. The deterministic version experienced significant slowdowns in these cases, while the randomized version maintained near \( O(n log n) \) performance.
