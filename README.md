@@ -40,8 +40,8 @@ This repository contains the implementation of both deterministic and randomized
 
 ### Performance Analysis:
 
-- **Best-case Complexity:** Both deterministic and randomized Quicksort algorithms have a best-case time complexity of \( O(n \log n) \) when the pivot consistently divides the array into balanced subarrays.
-- **Average-case Complexity:** The average time complexity for both algorithms is also \( O(n \log n) \), with randomized Quicksort reducing the chance of encountering the worst-case performance.
+- **Best-case Complexity:** Both deterministic and randomized Quicksort algorithms have a best-case time complexity of \( O(n log n) \) when the pivot consistently divides the array into balanced subarrays.
+- **Average-case Complexity:** The average time complexity for both algorithms is also \( O(n log n) \), with randomized Quicksort reducing the chance of encountering the worst-case performance.
 - **Worst-case Complexity:** The deterministic Quicksort has a worst-case time complexity of \( O(n^2) \), which occurs when the pivot divides the array into highly unbalanced partitions. Randomized Quicksort mitigates this by randomly choosing the pivot.
 
 ### Empirical Results:
@@ -62,6 +62,6 @@ The following table summarizes the running times (in seconds) of both algorithms
 
 ### Key Observations:
 
-- **Random Arrays:** Both algorithms perform similarly, showing near-optimal \( O(n \log n) \) performance.
+- **Random Arrays:** Both algorithms perform similarly, showing near-optimal \( O(n log n) \) performance.
 - **Sorted Arrays:** Deterministic Quicksort performs efficiently, but Randomized Quicksort incurs slight overhead due to random pivot selection.
 - **Reverse-Sorted Arrays:** Deterministic Quicksort shows a slight decline in performance due to unbalanced partitions, while Randomized Quicksort maintains consistent performance.
