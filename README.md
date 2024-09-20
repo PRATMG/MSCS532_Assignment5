@@ -65,3 +65,7 @@ The following table summarizes the running times (in seconds) of both algorithms
 - **Random Arrays:** Both algorithms perform similarly, showing near-optimal \( O(n log n) \) performance.
 - **Sorted Arrays:** Deterministic Quicksort performs efficiently, but Randomized Quicksort incurs slight overhead due to random pivot selection.
 - **Reverse-Sorted Arrays:** Deterministic Quicksort shows a slight decline in performance due to unbalanced partitions, while Randomized Quicksort maintains consistent performance.
+
+### References
+
+Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). Introduction to algorithms (4th ed.). The MIT Press.
